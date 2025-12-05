@@ -272,3 +272,44 @@ select:focus {
     display: none;
   }
 }
+
+/* ==============================
+   Edit Button (Neutral)
+   ============================== */
+.edit-btn {
+  background-color: #e0e0e0;  /* Light gray */
+  color: #000;                /* Black text for contrast */
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-btn:hover {
+  background-color: #cfcfcf;
+}
+
+.edit-btn:focus {
+  outline: 3px solid #4A90E2; /* WCAG focus */
+}
+
+/* ==============================
+   Delete Button (High-Contrast Red)
+   ============================== */
+.delete-btn {
+  background-color: #d32f2f;   /* Red */
+  color: #fff;                 /* White text for contrast */
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.delete-btn:hover {
+  background-color: #b71c1c;  /* Darker red on hover */
+}
+
+.delete-btn:focus {
+  outline: 3px solid #4A90E2; /* Blue outline for keyboard users */
+}
