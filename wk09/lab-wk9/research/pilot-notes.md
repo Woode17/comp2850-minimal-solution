@@ -182,7 +182,7 @@
 ## **Participant P3**
 
 **Mode**: HTMX but no keyboard
-**Date**: 2025-01-12 14:15
+**Date**: 2025-01-12 16:58
 **Consent**: ✅
 **Duration**: 17 minutes
 
