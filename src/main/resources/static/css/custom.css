@@ -273,22 +273,90 @@ select:focus {
     display: none;
   }
 }
-/* Strongly override PicoCSS for delete buttons */
+/
+/* ---------------------------
+   Fix 1 – Contrast Updates
+---------------------------- */
+.task-item {
+  border: 2px solid #767676;
+}
+
+.task-meta {
+  color: #4c4c4c;
+}
+
+.task-item:hover,
+.task-item:focus-within {
+  background-color: #e8e8e8;
+}
+
+*:focus {
+  outline: 3px solid #1E63B4;
+  outline-offset: 3px;
+}
+
+/* ---------------------------
+   Fix 2 – Delete Button
+---------------------------- */
 button.delete-btn {
-  background-color: red !important;
+  background-color: #C40000 !important;
   color: white !important;
   border: none;
-  padding: 0.5rem 1rem;      /* SAME SIZE as Edit */
-  border-radius: 10px;       /* SAME ROUNDING */
-  font-size: 1rem;           /* SAME TEXT SIZE */
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
   cursor: pointer;
 }
 
 button.delete-btn:hover {
-  background-color: #800000;
+  background-color: #8c0000;
 }
 
 button.delete-btn:focus {
-  outline: 3px solid #4A90E2;
+  outline: 3px solid #1E63B4;
   outline-offset: 2px;
+}
+
+/* ---------------------------
+   Fix 3 – Larger Task Text
+---------------------------- */
+.task-title {
+  font-size: 1.75rem;
+  line-height: 1.4;
+}
+
+.task-meta {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* ---------------------------
+   Glare-Compatible Contrast Fix
+---------------------------- */
+
+/* App container (optional but recommended) */
+body {
+  background-color: #FAFAFA; /* Off-white, reduced glare */
+}
+
+/* Stronger task borders */
+.task-item {
+  border: 2px solid #6E6E6E; /* medium grey for visibility */
+}
+
+/* Darker muted text for readability */
+.task-meta {
+  color: #404040; /* high-contrast charcoal */
+}
+
+/* Darker hover and focus backgrounds */
+.task-item:hover,
+.task-item:focus-within {
+  background-color: #E3E3E3;
+}
+
+/* Stronger focus indicators */
+*:focus {
+  outline: 3px solid #1E63B4; 
+  outline-offset: 3px;
 }
