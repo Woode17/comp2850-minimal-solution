@@ -50,11 +50,34 @@
     }
 
     /* Override Pico.css button color for WCAG 1.4.3 AA compliance */
-    button[type="submit"],
+    /*button[type="submit"],
     button {
       color: white !important; /* White text on blue background for better contrast */
+
     }
+    */
+    /* Only delete buttons */
+    button.delete-btn {
+      background-color: red !important;       /* WCAG-compliant red */
+      color: white !important;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      font-size: 1.25rem;
+      cursor: pointer;
+    }
+
+    button.delete-btn:hover {
+      background-color: #800000;      /* Darker red on hover */
+    }
+
+    button.delete-btn:focus {
+      outline: 3px solid #4A90E2;
+      outline-offset: 2px;
+    }
+
   </style>
+  <link rel="stylesheet" href="static/css/custom.css">
 </head>
 <body>
   {# Include header with navigation and accessibility features #}

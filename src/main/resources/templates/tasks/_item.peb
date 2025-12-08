@@ -1,24 +1,18 @@
 <li id="task-{{ task.id }}" class="task-view">
   <span class="task-title">{{ task.title }}</span>
 
-  <!-- Edit Button (Neutral color) -->
   <form action="/tasks/{{ task.id }}/edit" method="get" style="display: inline;"
         hx-get="/tasks/{{ task.id }}/edit"
         hx-target="#task-{{ task.id }}"
         hx-swap="outerHTML">
-    <button type="submit" class="edit-btn" aria-label="Edit task: {{ task.title }}">
-      Edit
-    </button>
+    <button type="submit" aria-label="Edit task: {{ task.title }}">Edit</button>
   </form>
 
-  <!-- Delete Button (High-Contrast Red) -->
   <form action="/tasks/{{ task.id }}/delete" method="post" style="display: inline;"
         hx-delete="/tasks/{{ task.id }}"
         hx-target="#task-{{ task.id }}"
         hx-swap="outerHTML"
         hx-confirm="Delete the task '{{ task.title }}'?">
-    <button type="submit" class="delete-btn" aria-label="Delete task: {{ task.title }}">
-      Delete
-    </button>
+    <button type="submit" class="delete-btn" aria-label="Delete task: {{ task.title }}">Delete</button>
   </form>
 </li>
